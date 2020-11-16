@@ -1,0 +1,382 @@
+body{
+    background: url(https://i.redd.it/imkv74m4q5g41.png) ;
+    font-family: 'Inconsolata', monospace;
+    font-weight:bold;
+    color:gray;
+    text-align:center;
+    -webkit-font-smoothing: antialiased;
+}
+div.content { margin: 0; height: 100%; overflow-y:-moz-hidden-unscrollable; overflow-x: -moz-hidden-unscrollable;}
+/*-------Popout-------*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: -moz-hidden-unscrollable; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #9cbc0f;
+    background-color: rgba(156,188,15,0.3); /* Black w/ opacity */
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height: 90%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* -------BoxWrap------*/
+.box-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:10%;
+}
+/* -------Gameboy------*/
+.gameboy_Empty {
+    width: 380px;
+    height: 600px;
+    cursor: pointer;
+    border: Hidden;
+    background: url(../images/Gameboy/Gameboy_resize.png) no-repeat center;
+}
+.gameboy_Empty .Screenbtn {
+    position: absolute;
+    top: 50%;
+    left: 48.8%;
+    transform: translate(-40%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(156,188,15,0.05); /* Black w/ opacity */
+    color: white;
+    font-size: 14px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.gameboy_Empty .btn:hover {
+    background-color: black;
+}
+
+.gameboy_Empty:active
+{
+    background: url(../images/Gameboy/Gameboy_resize.png) no-repeat center;
+    width: 380px;
+    height: 600px;
+}
+.gameboy_Green_Cartridge {
+    width: 380px;
+    height: 600px;
+    background: url(../images/Gameboy/Gameboy_on_Green_Cartridge.png) no-repeat center;
+    cursor:pointer;
+    border:none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.gameboy_Green_Cartridge .Screenbtn {
+    position: absolute;
+    top: 50%;
+    left: 48.8%;
+    transform: translate(-40%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(156,188,15,0.05); /* Black w/ opacity */
+    color: white;
+    font-size: 14px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.gameboy_Green_Cartridge .btn:hover {
+    background-color: black;
+}
+.gameboy_Blue_Cartridge{
+    width: 380px;
+    height: 600px;
+    background: url(../images/Gameboy/Gameboy_on_Blue_Cartridge.png) no-repeat center;
+    cursor:pointer;
+    border:none;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+.gameboy_Blue_Cartridge .Screenbtn {
+    position: absolute;
+    top: 50%;
+    left: 48.8%;
+    transform: translate(-40%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(156,188,15,0.05); /* Black w/ opacity */
+    color: white;
+    font-size: 14px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.gameboy_Blue_Cartridge .btn:hover {
+    background-color: black;
+}
+.gameboy_Red_Cartridge{
+    width: 380px;
+    height: 600px;
+    background: url(../images/Gameboy/Gameboy_on_Red_Cartridge.png) no-repeat center;
+    cursor:pointer;
+    border:none;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+.gameboy_Red_Cartridge .Screenbtn {
+    position: absolute;
+    top: 50%;
+    left: 48.8%;
+    transform: translate(-40%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(156,188,15,0.05); /* Black w/ opacity */
+    color: white;
+    font-size: 14px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.gameboy_Red_Cartridge .btn:hover {
+    background-color: black;
+}
+.gameboy_Yellow_Cartridge{
+    width: 380px;
+    height: 600px;
+    background: url(../images/Gameboy/Gameboy_on_Yellow_Cartridge.png) no-repeat center;
+    cursor:pointer;
+    border:none;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+.gameboy_Yellow_Cartridge .Screenbtn {
+    position: absolute;
+    top: 50%;
+    left: 48.8%;
+    transform: translate(-40%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(156,188,15,0.05); /* Black w/ opacity */
+    color: white;
+    font-size: 14px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.gameboy_Yellow_Cartridge .btn:hover {
+    background-color: black;
+}
+/* -------Box/Test-------*/
+/*.box{
+    padding:30px;
+    margin:2%;
+    background:white;
+    width:30%;
+    border:1px solid #d6d6d6;
+    box-shadow:0 2px 3px 0 rgba(0,0,0,0.25);
+    border-radius:3px;
+    transition:.2s all;
+
+
+}*/
+/* -------Back_Button-------*/
+.Back_Button{
+    background-position: top left;
+    background-image:url(../images/Gameboy/Back_Button.png);
+    margin : 0.5% ;
+    cursor:pointer;
+    border:none;
+    width:85px;
+    height:53px;
+}
+.Back_Button.hover{
+    background-position: top left;
+}
+
+/* -------Cartridge_Green-------*/
+.Cartridge_Green{
+    background:url(../images/Cartridges/Cartridge_1_resize.png) no-repeat  ;
+    margin : 0.5% ;
+    cursor:pointer;
+    border:Hidden;
+    width:229px;
+    height:238px;
+    transition:.2s all;
+
+
+}
+.Cartridge_Green_Used{
+    background:url(../images/Cartridges/Cartridge_1_resize_Darkened.png) no-repeat  ;
+    opacity: 0.25;
+    margin : 0.5% ;
+    cursor:pointer;
+    border:Hidden;
+    width:229px;
+    height:238px;
+}
+.Cartridge_Green:active
+{
+    padding:10px;
+    margin:2%;
+    background:url(../images/Cartridges/Cartridge_1_resize_Darkened.png) no-repeat  ;
+    width:229px;
+    height:238px;
+
+}
+.box-wrap:hover .Cartridge_Green{
+    filter:blur(3px);
+    opacity:.5;
+    transform: scale(.98);
+    box-shadow:none;
+}
+.box-wrap:hover .Cartridge_Green:hover{
+    transform:scale(1);
+    filter:blur(0px);
+    opacity:1;
+    box-shadow:0 8px 20px 0 rgba(0,0,0,0.125);
+}
+
+/* -------Cartridge_Blue-------*/
+.Cartridge_Blue{
+    background:url(../images/Cartridges/Cartridge_2_resize.png) no-repeat center left;
+    margin : 0.5% ;
+    cursor:pointer;
+    border:Hidden;
+    width:229px;
+    height:238px;
+    transition:.2s all;
+
+}
+.Cartridge_Blue_Used{
+    background:url(../images/Cartridges/Cartridge_2_resize_Darkened.png) no-repeat center left;
+    margin : 0.5% ;
+    opacity: 0.25;
+    cursor:pointer;
+    border:Hidden;
+    width:229px;
+    height:238px;
+    transition:.2s all;
+
+}
+.Cartridge_Blue:active {
+    background: url(../images/Cartridges/Cartridge_2_resize_Darkened.png) no-repeat center left;
+    width: 229px;
+    height: 238px;
+}
+.box-wrap:hover .Cartridge_Blue{
+    filter:blur(3px);
+    opacity:.5;
+    transform: scale(.98);
+    box-shadow:none;
+}
+.box-wrap:hover .Cartridge_Blue:hover{
+    transform:scale(1);
+    filter:blur(0px);
+    opacity:1;
+    box-shadow:0 8px 20px 0 rgba(0,0,0,0.125);
+}
+/* -------Cartridge_Red-------*/
+.Cartridge_Red{
+    background:url(../images/Cartridges/Cartridge_3_resize.png) no-repeat center right;
+    margin : 0.5% ;
+    cursor:pointer;
+    border:hidden;
+    width:229px;
+    height:238px;
+    transition:.2s all;
+}
+.Cartridge_Red_Used {
+    background: url(../images/Cartridges/Cartridge_3_resize_Darkened.png) no-repeat center left;
+    margin: 0.5%;
+    opacity: 0.25;
+    cursor: pointer;
+    border:hidden;
+    width: 229px;
+    height: 238px;
+    transition: .2s all;
+}
+.Cartridge_Red:active {
+    background: url(../images/Cartridges/Cartridge_3_resize_Darkened.png) no-repeat center right;
+    width: 229px;
+    height: 238px;
+}
+.box-wrap:hover .Cartridge_Red{
+    filter:blur(3px);
+    opacity:.5;
+    transform: scale(.98);
+    box-shadow:none;
+}
+.box-wrap:hover .Cartridge_Red:hover{
+    transform:scale(1);
+    filter:blur(0px);
+    opacity:1;
+    box-shadow:0 8px 20px 0 rgba(0,0,0,0.125);
+}
+
+/* -------Cartridge_Yellow-------*/
+.Cartridge_Yellow {
+    background:url(../images/Cartridges/Cartridge_4_resize.png) no-repeat right;
+    margin : 0.5% ;
+    cursor:pointer;
+    border:Hidden;
+    width:229px;
+    height:238px;
+    transition:.2s all;
+}
+.Cartridge_Yellow_Used {
+    background: url(../images/Cartridges/Cartridge_4_resize_Darkened.png) no-repeat center left;
+    margin: 0.5%;
+    opacity: 0.25;
+    cursor:pointer;
+    border:Hidden;
+    width: 229px;
+    height: 238px;
+    transition: .2s all;
+}
+.Cartridge_Yellow:active {
+    background: url(../images/Cartridges/Cartridge_4_resize_Darkened.png) no-repeat right;
+    width: 229px;
+    height: 238px;
+}
+.box-wrap:hover .Cartridge_Yellow{
+    filter:blur(3px);
+    opacity:.5;
+    transform: scale(.98);
+    box-shadow:none;
+}
+.box-wrap:hover .Cartridge_Yellow:hover{
+    transform:scale(1);
+    filter:blur(0px);
+    opacity:1;
+    box-shadow:0 8px 20px 0 rgba(0,0,0,0.125);
+}
+

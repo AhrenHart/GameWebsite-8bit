@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8-bit prototype</title>
+    <link rel="stylesheet" href="css/Website%20css.css">
+
+
+</head>
+<body>
+<div class="content">
+    <div class = "Back_Button">
+
+    </div>
+</div>
+<!--<-------Popout---------->
+
+<!-- Trigger/Open The Modal -->
+<!--<button id="myBtn">Open Modal</button>-->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>texty text text text place where i shall put all my random af text</p>
+    </div>
+
+</div>
+<!--<-------cartridges--------->
+
+<div class="box-wrap">
+    <div class="Cartridge_Green">
+        <form action =About%20Page.html>
+            <input class="Cartridge_Green" type="submit" value="">
+        </form>
+    </div>
+    <div class="Cartridge_Blue">
+        <form action =PlayGamePage.html>
+            <input class="Cartridge_Blue" type="submit" value="">
+        </form>
+    </div>
+    <!--<-------Gameboy--------->
+    <div class="gameboy_Empty">
+        <button class="Screenbtn" id="Screenbtn">Press to turn on</button>
+    </div>
+    <!--<-------cartridges--------->
+    <div class="Cartridge_Red">
+        <form action = GamesDesignPage.html>
+            <input class="Cartridge_Red" type="submit" value="">
+        </form>
+    </div>
+    <div class="Cartridge_Yellow">
+        <form action = DevelopmentPage.html>
+            <input class="Cartridge_Yellow" type="submit" value="">
+        </form>
+    </div>
+</div>
+<!--<-------Javascript--------->
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("Screenbtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+
+</script>
+</body>
+</html>
